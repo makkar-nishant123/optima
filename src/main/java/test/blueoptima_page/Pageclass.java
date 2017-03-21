@@ -8,21 +8,25 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Hello world!
- *
- */
-public class Pageclass 
-{
-	public WebDriver driver = new ChromeDriver() ;
-	WebDriverWait wait = new WebDriverWait(driver , 15); 
+public class Pageclass {
+	// Initializing driver Object.
+	public WebDriver driver = new ChromeDriver();
 
-	public Pageclass()
-	{		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "chromedriver.exe");
+	// Initializing Explicit Wait Object.
+	WebDriverWait wait = new WebDriverWait(driver, 15);
+
+	/**
+	 * constructor defining the Chrome-driver path with PageFactory
+	 * initialization (POM is being used here).
+	 */
+	public Pageclass() {
+		System.setProperty("webdriver.chrome.driver",
+				System.getProperty("user.dir") + "chromedriver.exe");
 		PageFactory.initElements(driver, this);
-		
+
 	}
-	
+
+	// Declaring and initializing WebElements here.
 	@FindBy(xpath = ".//*[@name='username']")
 	private WebElement user_name;
 	@FindBy(xpath = ".//*[@name='password']")
@@ -37,37 +41,45 @@ public class Pageclass
 	private WebElement check_box;
 	@FindBy(id = "highcharts-0")
 	private WebElement graph;
-	
-	
-	
-	public void enter_user()
-	{
+
+	/**
+	 * Entering User-name.
+	 */
+	public void enter_user() {
 		wait.until(ExpectedConditions.visibilityOf(user_name));
 		user_name.sendKeys("makkar.nishant123@gmail.com");
 	}
-	
-	public void enter_pass()
-	{
+
+	/**
+	 * Entering Password.
+	 */
+	public void enter_pass() {
 		password.sendKeys("1BlU@!$#@2");
 	}
-	
-	public void click_Login()
-	{
+
+	/**
+	 * Clicking on Login.
+	 */
+	public void click_Login() {
 		Login.submit();
 	}
-	
-	public void devclickandvalidate()
-	{			wait.until(ExpectedConditions.visibilityOf(my_dev));
+
+	/**
+	 * Validating and clicking on developer tab , Validating developers once
+	 * opened again.
+	 */
+	public void devclickandvalidate() {
+		wait.until(ExpectedConditions.visibilityOf(my_dev));
 		my_dev.click();
 		wait.until(ExpectedConditions.visibilityOf(data_developers));
 
 	}
-	
-	public void select_checkbox_and_graph_verify()
-	{
-		
-		
+
+	/**
+	 * Verifying one of the graph.
+	 */
+	public void graph_verify() {
+
 		wait.until(ExpectedConditions.visibilityOf(graph));
 	}
-	
 }

@@ -1,4 +1,4 @@
-package test.blueoptima_test;
+package test.blueoptima_test_UI;
 
 import org.testng.annotations.Test;
 
