@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46570" started-at="2017-03-20T19:02:13Z" finished-at="2017-03-20T19:02:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="46570" started-at="2017-03-20T19:02:13Z" finished-at="2017-03-20T19:02:59Z">
+      <class name="test.blueoptima_test.Test_blueoptima">
+        <test-method status="PASS" signature="test_fourpoints()[pri:0, instance:test.blueoptima_test.Test_blueoptima@7133da86]" name="test_fourpoints" duration-ms="46543" started-at="2017-03-21T00:32:13Z" finished-at="2017-03-21T00:32:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_fourpoints -->
+      </class> <!-- test.blueoptima_test.Test_blueoptima -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
